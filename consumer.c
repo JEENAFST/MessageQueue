@@ -17,7 +17,13 @@
 
  
 int main(int argc,char *argv[])
-{        int msgqid;
+{        
+         if (argc!= 2) 
+         {
+          fprintf(stderr, "Usage: %s <no_of_processes>\n", argv[0]);
+          exit(1);
+         }
+         int msgqid;
          int no_process=atoi(argv[1]);//atoi to convert character array to integer
        
          //No of process will information will be collected as argv[1] during run time
